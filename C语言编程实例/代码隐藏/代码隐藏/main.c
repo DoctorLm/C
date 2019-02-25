@@ -1,0 +1,45 @@
+//
+//  main.c
+//  代码隐藏
+//
+//  Created by 陆敏 on 2019/2/7.
+//  Copyright © 2019 陆敏. All rights reserved.
+//
+
+#include <stdio.h>
+
+int Function(int x,int y){
+    return x+y;
+}
+unsigned char arr[] = {
+    0x55,
+    0x8B,0xEC,
+    0x83,0xEC,0x40,
+    0x53,
+    0x56,
+    0x57,
+    0x8D,0x7D,0xC0,
+    0xB9,0x10,0x00,0x00,0x00,
+    0xB8,0xCC,0xCC,0xCC,0xCC,
+    0xF3,0xAB,
+    0x8B,0x45,0x08,
+    0x03,0x45,0x0C,
+    0x5F,
+    0x5E,
+    0x5B,
+    0x8B,0xE5,
+    0x5D,
+    0xC3
+};
+int main(int argc, const char * argv[]) {
+    
+    int(*pFun)(int,int);
+    pFun = (int(*)(int,int))&arr;
+    int x = pFun(5,5);
+    printf("%d\n",x);
+    //Function(1,2);
+
+    // insert code here...
+    printf("Hello, World!\n");
+    return 0;
+}
