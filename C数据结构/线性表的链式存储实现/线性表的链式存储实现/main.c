@@ -126,7 +126,6 @@ int main(int argc, const char * argv[]) {
     int len = getsize(rear);
     Node *p = getptr(rear, 0);
     printf("%d %d\n",len,p->Data);
-    
 /*------------------------------------------*/
     Node *head = NULL;
     insert(&head, 0, 10);
@@ -144,7 +143,7 @@ int main(int argc, const char * argv[]) {
     printf("\n");
     trave(head, add);//翻转后
     printf("\n");
-//
+
 //    /*--------------------*/
     Node *aHead;
     insert(&aHead, 0, 10);
@@ -156,13 +155,6 @@ int main(int argc, const char * argv[]) {
     insert(&bHead, 0, 1);
     insert(&bHead, 0, 9);
     uNion(aHead, bHead);
-//
-//    while (aHead) {
-//        printf("%d ",aHead->Data);
-//        aHead = aHead->next;
-//    }
-//    printf("\n");
-    
     
     // insert code here...
     printf("Hello, World!\n");
